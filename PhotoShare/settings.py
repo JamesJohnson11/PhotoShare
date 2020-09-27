@@ -133,7 +133,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
 ]
+
+SOCIAL_AUTH_TWITTER_KEY = 'kehsTwzJBRrAHl0ZdnruEC5JN'
+SOCIAL_AUTH_TWITTER_SECRET = 'I1pvFM7BCQyzYZXzCvfLLkrcjClXKb2jL5gc8tpy6cn4XDHnUI'
 
 
 LOGIN_REDIRECT_URL = 'dashboard'
