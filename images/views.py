@@ -20,8 +20,8 @@ def image_create(request):
 
             # Redirect to new created item detail view
             return redirect(new_item.get_absolute_url())
-        else:
-            # Build form w/ data provided by the photoshare via GET
-            form = ImageCreateForm(data=request.GET)
+    else:
+        # Build form w/ data provided by the photoshare via GET
+        form = ImageCreateForm(data=request.GET)
 
-        return render(request, 'images/image/create.html', {'section':'images', 'form':form})
+    return render(request, 'images/image/create.html', {'section':'images', 'form':form})
